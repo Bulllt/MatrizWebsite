@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #515fa6;
+  --secondary-color: #ffabcf;
+  --accent-color: #e65246;
+  --text-color: #000;
+  --background: #fff;
+  --gray: #808080;
+  --transition: all 0.3s ease;
+}
