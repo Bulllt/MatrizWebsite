@@ -1,12 +1,112 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import "./style.css";
 
 export default function Home() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000 }),
+  ]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [carouselHeight, setCarouselHeight] = useState("100vh");
+
+  const slides = [
+    {
+      image: "/images/a.jpg",
+      title: "Bienvenidos",
+      description: "Descubre nuestros servicios y proyectos",
+    },
+    {
+      image: "/images/a.jpg",
+      title: "Innovación",
+      description: "Soluciones creativas para tus necesidades",
+    },
+    {
+      image: "/images/a.jpg",
+      title: "Calidad",
+      description: "Trabajamos con los más altos estándares",
+    },
+  ];
+
+  useEffect(() => {
+    const updateCarouselHeight = () => {
+      const navbar = document.querySelector(".navbarContainer");
+      if (navbar) {
+        const navbarHeight = navbar.offsetHeight;
+        setCarouselHeight(`calc(100vh - ${navbarHeight}px)`);
+      }
+    };
+
+    updateCarouselHeight();
+
+    window.addEventListener("resize", updateCarouselHeight);
+    return () => {
+      window.removeEventListener("resize", updateCarouselHeight);
+    };
+  }, []);
+
+  const scrollTo = (index) => {
+    if (emblaApi) {
+      emblaApi.scrollTo(index);
+      const autoplay = emblaApi.plugins().autoplay;
+      if (autoplay) {
+        autoplay.stop();
+        autoplay.play();
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
   return (
     <main className="homeContainer">
-      <h1>THIS IS THE HOME</h1>
-      this is regular text
+      <section className="heroSection" style={{ height: carouselHeight }}>
+        <div className="heroCarousel" ref={emblaRef}>
+          <div className="heroCarouselContainer">
+            {slides.map((slide, index) => (
+              <div className="heroSlide" key={index}>
+                <div
+                  className="heroImage"
+                  style={{ backgroundImage: `url(${slide.image})` }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="heroTextBlock">
+            <h2>
+              Impulsamos las artes, la cultura y el patrimonio en la zona
+              austral de Chile
+            </h2>
+            <button className="heroButton">Saber Más</button>
+          </div>
+
+          <div className="heroDots">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                className={`heroDot ${
+                  index === selectedIndex ? "heroDotActive" : ""
+                }`}
+                onClick={() => scrollTo(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

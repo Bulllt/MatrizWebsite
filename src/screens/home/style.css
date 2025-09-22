@@ -1,3 +1,128 @@
-.homeContainer h1 {
-  color: var(--primary-color);
+.homeContainer {
+  width: 100%;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroCarousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heroCarouselContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.heroSlide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroTextBlock {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  padding: 2rem;
+  max-width: 500px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.heroTextBlock h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.heroButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.heroButton:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.heroDots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.heroDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.heroDot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.heroDotActive {
+  background-color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .heroTextBlock {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .heroDots {
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroTextBlock {
+    padding: 1rem;
+  }
+
+  .heroTextBlock h2 {
+    font-size: 1.75rem;
+  }
+
+  .heroButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
