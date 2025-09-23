@@ -16,31 +16,31 @@ export default function WeAre() {
       name: "Catherine Núñez Flos",
       role: "Directora ejecutiva",
       image: "/images/a.jpg",
-      path: "/equipo-catherine",
+      path: "/equipo/catherine",
     },
     {
       name: "Eduardo Filun",
       role: "Director programas y formación",
       image: "/images/a.jpg",
-      path: "/equipo-eduardo",
+      path: "/equipo/eduardo",
     },
     {
       name: "Fernanda González",
       role: "Directora proyectos y territorio",
       image: "/images/a.jpg",
-      path: "/equipo-fernanda",
+      path: "/equipo/fernanda",
     },
     {
       name: "Gustavo Saldivia Kuschel",
       role: "Patrimonio e investigación",
       image: "/images/a.jpg",
-      path: "/equipo-gustavo",
+      path: "/equipo/gustavo",
     },
     {
       name: "Matías Toro Nuñez",
       role: "Informática",
       image: "/images/a.jpg",
-      path: "/equipo-matias",
+      path: "/equipo/matias",
     },
   ];
 
