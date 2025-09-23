@@ -5,6 +5,7 @@ import "./App.css";
 import Layout from "./Layout.jsx";
 
 import Home from "../screens/home/index.jsx";
+import WeAre from "../screens/weAre/index.jsx";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/somos" element={<WeAre />} />
         </Route>
       </Routes>
     </Router>
