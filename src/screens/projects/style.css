@@ -1,0 +1,44 @@
+.projectsContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.projectsHero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.projectsTitle {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.projectsDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .projectsContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .projectsTitle {
+    font-size: 2.5rem;
+  }
+
+  .projectsDescription {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectsTitle {
+    font-size: 2rem;
+  }
+}
