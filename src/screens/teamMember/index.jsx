@@ -71,7 +71,6 @@ export default function TeamMember() {
           VOLVER
         </NavLink>
 
-        {/* Member Content */}
         <div className="teamMemberCard">
           <div className="teamMemberImageSection">
             <img

@@ -7,6 +7,7 @@ import Layout from "./Layout.jsx";
 import Home from "../screens/home/index.jsx";
 import WeAre from "../screens/weAre/index.jsx";
 import TeamMember from "../screens/teamMember/index.jsx";
+import WeDo from "../screens/weDo/index.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/somos" element={<WeAre />} />
           <Route path="/equipo/:memberId" element={<TeamMember />} />
+          <Route path="/queHacemos" element={<WeDo />} />
         </Route>
       </Routes>
     </Router>
