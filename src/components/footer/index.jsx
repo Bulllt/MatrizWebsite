@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="footerContent">
         <div className="footerSection">
           <NavLink to="/" className="footerLogo">
-            <img src="/vite.svg" alt="Matriz Logo" />
+            <img src="/logo2.png" alt="Matriz Logo" />
           </NavLink>
         </div>
 
