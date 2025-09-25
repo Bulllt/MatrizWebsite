@@ -40,12 +40,13 @@
 .heroTextBlock {
   position: absolute;
   top: 50%;
-  left: 2rem;
+  left: 0;
   transform: translateY(-50%);
   background-color: var(--primary-color);
   padding: 2rem;
   max-width: 500px;
-  border-radius: 8px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
   z-index: 10;
 }
 
