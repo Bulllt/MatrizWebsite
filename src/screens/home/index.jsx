@@ -8,7 +8,6 @@ export default function Home() {
     Autoplay({ delay: 5000 }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [carouselHeight, setCarouselHeight] = useState("100vh");
 
   const slides = [
     {
@@ -27,23 +26,6 @@ export default function Home() {
       description: "Trabajamos con los más altos estándares",
     },
   ];
-
-  useEffect(() => {
-    const updateCarouselHeight = () => {
-      const navbar = document.querySelector(".navbarContainer");
-      if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-        setCarouselHeight(`calc(100vh - ${navbarHeight}px)`);
-      }
-    };
-
-    updateCarouselHeight();
-
-    window.addEventListener("resize", updateCarouselHeight);
-    return () => {
-      window.removeEventListener("resize", updateCarouselHeight);
-    };
-  }, []);
 
   const scrollTo = (index) => {
     if (emblaApi) {
@@ -73,7 +55,7 @@ export default function Home() {
 
   return (
     <main className="homeContainer">
-      <section className="heroSection" style={{ height: carouselHeight }}>
+      <section className="heroSection">
         <div className="heroCarousel" ref={emblaRef}>
           <div className="heroCarouselContainer">
             {slides.map((slide, index) => (
@@ -88,8 +70,8 @@ export default function Home() {
 
           <div className="heroTextBlock">
             <h2>
-              Impulsamos las artes, la cultura y el patrimonio en la zona
-              austral de Chile
+              Impulsamos las artes, la cultura y el patrimonio en la zona sur de
+              Chile
             </h2>
             <button className="heroButton">Saber Más</button>
           </div>

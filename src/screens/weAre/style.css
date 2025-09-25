@@ -1,7 +1,7 @@
 .weContainer {
   width: 100%;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 8rem 1rem 2rem;
 }
 
 .weHero {
@@ -23,7 +23,7 @@
 }
 
 .weTagsSection {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -81,11 +81,38 @@
 }
 
 .weTagContent {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  transition: var(--transition);
+}
+
+.weTagContentActive {
+  max-height: 2000px;
+  opacity: 1;
   padding: 2rem 2rem;
 }
 
-.weTagContent p {
-  margin-bottom: 1.5rem;
+.weParagraph {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.weParagraphIcon {
+  color: var(--primary-color);
+  font-size: 1rem;
+  min-width: 20px;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.weTagItem:has(.weTagContentActive) {
+  border-color: var(--primary-color);
 }
 
 .weTeamGrid {
@@ -102,6 +129,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .weTeamMember:hover {
@@ -112,7 +140,7 @@
 .weTeamImage {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 10px;
   object-fit: cover;
   margin: 0 auto 1rem;
   border: 3px solid var(--primary-color);
@@ -121,10 +149,22 @@
 .weTeamName {
   color: var(--text-color);
   margin-bottom: 0.5rem;
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .weTeamRole {
   color: var(--gray);
+  margin-bottom: 1rem;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .weMemberButton {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 import "./style.css";
 
 export default function WeAre() {
@@ -46,7 +47,7 @@ export default function WeAre() {
 
   const tagContent = {
     mision: {
-      title: "Misión - Visión",
+      title: "Misión y Visión",
       content: [
         "Misión: Impulsar el desarrollo de las artes, la cultura y el patrimonio en la zona austral desde un enfoque descentralizado, inclusivo y sostenible. A través de la colaboración multidisciplinaria y la participación activa, fortalecemos capacidades y redes para que las comunidades se empoderen y la creación artística sea motor de transformación social, cohesión e identidad local.",
         "Visión: Ser una plataforma referente en gestión cultural, artística y patrimonial en la zona austral, que democratiza el acceso a herramientas, recursos y espacios de creación. Queremos ser un agente de cambio que fortalezca el ecosistema cultural, impulse la participación activa de las comunidades y genere impactos sociales y culturales sostenibles, posicionando la cultura como eje de la vida de las personas y del territorio.",
@@ -96,7 +97,9 @@ export default function WeAre() {
             <div key={key} className="weTagItem">
               <button
                 className={`weTagButton ${
-                  activeTag === key ? "weTagButtonActive" : ""
+                  activeTag === key && activeTag != "equipo"
+                    ? "weTagButtonActive"
+                    : ""
                 }`}
                 onClick={() => toggleTag(key)}
               >
@@ -108,37 +111,41 @@ export default function WeAre() {
                 {content.title}
               </button>
 
-              {(activeTag === key || key === "equipo") && (
-                <div className="weTagContent">
-                  {key === "equipo" ? (
-                    <>
-                      <div className="weTeamGrid">
-                        {teamMembers.map((member, index) => (
-                          <div key={index} className="weTeamMember">
-                            <img
-                              src={member.image}
-                              alt={member.name}
-                              className="weTeamImage"
-                            />
-                            <h3 className="weTeamName">{member.name}</h3>
-                            <p className="weTeamRole">{member.role}</p>
-                            <NavLink
-                              to={member.path}
-                              className="weMemberButton"
-                            >
-                              Ver más
-                            </NavLink>
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  ) : (
-                    content.content.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))
-                  )}
-                </div>
-              )}
+              <div
+                className={`weTagContent ${
+                  activeTag === key || key === "equipo"
+                    ? "weTagContentActive"
+                    : ""
+                }`}
+              >
+                {key === "equipo" ? (
+                  <>
+                    <div className="weTeamGrid">
+                      {teamMembers.map((member, index) => (
+                        <div key={index} className="weTeamMember">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="weTeamImage"
+                          />
+                          <h4 className="weTeamName">{member.name}</h4>
+                          <p className="weTeamRole">{member.role}</p>
+                          <NavLink to={member.path} className="weMemberButton">
+                            Ver más
+                          </NavLink>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  content.content.map((paragraph, index) => (
+                    <p key={index} className="weParagraph">
+                      <FiArrowRight className="weParagraphIcon" />
+                      {paragraph}
+                    </p>
+                  ))
+                )}
+              </div>
             </div>
           ))}
         </div>

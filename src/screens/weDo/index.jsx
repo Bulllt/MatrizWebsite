@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 import "./style.css";
 
 export default function WeDo() {
@@ -62,11 +63,9 @@ export default function WeDo() {
       <section className="weDoTagsSection">
         <div className="weDoTagsContainer">
           {Object.entries(tagContent).map(([key, content]) => (
-            <div key={key} className="weDoTagItem">
+            <div key={key} className={`weDoTagItem ${key}Item`}>
               <button
-                className={`weDoTagButton ${
-                  activeTag === key ? "weDoTagButtonActive" : ""
-                }`}
+                className={`weDoTagButton ${key}`}
                 onClick={() => toggleTag(key)}
               >
                 <span className="weDoTagIcon">
@@ -75,13 +74,18 @@ export default function WeDo() {
                 {content.title}
               </button>
 
-              {activeTag === key && (
-                <div className="weDoTagContent">
-                  {content.content.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
-                </div>
-              )}
+              <div
+                className={`weDoTagContent ${
+                  activeTag === key ? "weDoTagContentActive" : ""
+                }`}
+              >
+                {content.content.map((paragraph, index) => (
+                  <p key={index} className="weDoParagraph">
+                    <FiArrowRight className="weDoParagraphIcon" />
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </div>
