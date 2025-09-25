@@ -107,6 +107,7 @@
     max-width: none;
     padding: 1.5rem;
     text-align: center;
+    border-radius: 8px;
   }
 
   .heroDots {

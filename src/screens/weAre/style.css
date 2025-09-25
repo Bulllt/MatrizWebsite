@@ -186,7 +186,7 @@
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .weContainer {
-    padding: 1rem 0.5rem;
+    padding: 8rem 0.5rem 1rem;
   }
 
   .weTitle {
@@ -200,10 +200,6 @@
   .weTagButton {
     padding: 1.25rem 1.5rem;
     font-size: 1.1rem;
-  }
-
-  .weTagContent {
-    padding: 1.5rem 1.5rem;
   }
 
   .weTeamGrid {

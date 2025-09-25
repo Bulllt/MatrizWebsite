@@ -121,7 +121,7 @@
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .contactContainer {
-    padding: 1rem 0.5rem;
+    padding: 8rem 0.5rem 1rem;
   }
 
   .contactTitle {
