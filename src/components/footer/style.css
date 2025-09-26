@@ -121,6 +121,11 @@
     justify-content: center;
   }
 
+  .footerLogo img {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
   .footerSocials {
     justify-content: center;
   }

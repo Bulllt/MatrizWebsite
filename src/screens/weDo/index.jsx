@@ -39,7 +39,7 @@ export default function WeDo() {
       title: "Asesorías en gestión cultural",
       content: [
         "Contribuimos al fortalecimiento del sector artístico-cultural desde la profesionalización y la planificación estratégica.",
-        "Asesorías y acompañamiento a artistas, gestores e instituciones en diseño, gestión y evaluación de proyectos",
+        "Asesorías y acompañamiento a artistas, gestores e instituciones en diseño, gestión y evaluación de proyectos.",
         "Promoción de la sostenibilidad cultural, incorporando enfoques de financiamiento y modelos de gestión adecuados al territorio.",
       ],
     },
