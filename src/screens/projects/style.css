@@ -22,6 +22,116 @@
   color: var(--text-color);
 }
 
+.projectsGridSection {
+  max-width: 1200px;
+  margin: 5rem auto 0;
+  padding: 0 1rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.projectImageLink {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.projectImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.projectImageLink:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.projectContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectTitle {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.projectMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.projectMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.projectMetaIcon {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.projectMetaText {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.5rem 0;
+}
+
+.projectLink:hover {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.projectLinkIcon {
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.projectLink:hover .projectLinkIcon {
+  transform: translateX(3px);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .projectsContainer {
@@ -35,10 +145,62 @@
   .projectsDescription {
     font-size: 1rem;
   }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projectImage {
+    height: 180px;
+  }
+
+  .projectContent {
+    padding: 1rem;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .projectMetaText {
+    font-size: 0.85rem;
+  }
+
+  .projectLink {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .projectsTitle {
     font-size: 2rem;
   }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectCard {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.projectCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.projectCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.projectCard:nth-child(3) {
+  animation-delay: 0.3s;
 }
