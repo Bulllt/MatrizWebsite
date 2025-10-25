@@ -16,31 +16,31 @@ export default function WeAre() {
     {
       name: "Catherine Núñez Flos",
       role: "Directora ejecutiva",
-      image: "/images/a.jpg",
+      image: "/images/team/caty.jpg",
       path: "/equipo/catherine",
     },
     {
       name: "Eduardo Filun",
       role: "Director programas y formación",
-      image: "/images/a.jpg",
+      image: "/images/team/eduardo.jpg",
       path: "/equipo/eduardo",
     },
     {
       name: "Fernanda González",
       role: "Directora proyectos y territorio",
-      image: "/images/a.jpg",
+      image: "/images/team/fernanda.jpg",
       path: "/equipo/fernanda",
     },
     {
       name: "Gustavo Saldivia Kuschel",
       role: "Patrimonio e investigación",
-      image: "/images/a.jpg",
+      image: "/images/team/gustavo.jpg",
       path: "/equipo/gustavo",
     },
     {
       name: "Matías Toro Nuñez",
       role: "Informática",
-      image: "/images/a.jpg",
+      image: "/images/team/yo.jpg",
       path: "/equipo/matias",
     },
   ];
@@ -65,10 +65,10 @@ export default function WeAre() {
         "Compromiso territorial: Reconocemos el valor de la zona austral, potenciando sus identidades locales y promoviendo una cultura descentralizada.",
       ],
     },
-    transparencia: {
-      title: "Transparencia",
-      content: ["hola"],
-    },
+    //transparencia: {
+    //  title: "Transparencia",
+    //  content: ["hola"],
+    //},
     equipo: {
       title: "Equipo",
     },
