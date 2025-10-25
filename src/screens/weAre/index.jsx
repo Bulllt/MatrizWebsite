@@ -15,7 +15,7 @@ export default function WeAre() {
   const teamMembers = [
     {
       name: "Catherine Núñez Flos",
-      role: "Directora ejecutiva",
+      role: "Directora general",
       image: "/images/team/caty.jpg",
       path: "/equipo/catherine",
     },

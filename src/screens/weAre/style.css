@@ -138,8 +138,8 @@
 }
 
 .weTeamImage {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
   object-fit: cover;
   margin: 0 auto 1rem;
@@ -208,8 +208,8 @@
   }
 
   .weTeamImage {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -226,10 +226,5 @@
   .weTeamGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  .weTeamImage {
-    width: 100px;
-    height: 100px;
   }
 }
