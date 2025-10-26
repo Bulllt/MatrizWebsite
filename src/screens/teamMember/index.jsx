@@ -9,20 +9,20 @@ export default function TeamMember() {
   const teamMembersData = {
     catherine: {
       name: "Catherine Núñez Flos",
-      role: "Directora ejecutiva",
+      role: "Directora general",
       image: "/images/team/caty.jpg",
       description:
         "Licenciada en Artes Visuales, Diplomada en curaduría y Magíster en Gestión Cultural (c) por la Universidad de Buenos Aires. Profesional con amplia experiencia en curaduría y mediación de exposiciones, así como en el desarrollo de estudios de públicos y estrategias comunicacionales. Ha liderado proyectos que fomentan la participación comunitaria y fortalecen los vínculos entre espacios culturales, instituciones educativas y comunidades locales. Además, se dedica a la realización de talleres para infancias, promoviendo el desarrollo creativo y educativo de los más jóvenes a través del arte.",
     },
     eduardo: {
-      name: "Eduardo Filun",
+      name: "Eduardo Filún Matus",
       role: "Director programas y formación",
       image: "/images/team/eduardo.jpg",
       description:
         "Licenciado en Artes Visuales. Artista visual y docente. Su trayectoria profesional se ha centrado en el ámbito de la producción artística, desarrollando y presentando proyectos de creación en diversos espacios de exhibición. Paralelamente ha guiado instancias de mediación artística y se ha desempeñado como docente de artes visuales. Su práctica, desde una perspectiva descentralizada, se concibe bajo la integración de la creación junto a la difusión del arte contemporáneo.",
     },
     fernanda: {
-      name: "Fernanda González",
+      name: "Fernanda González Jara",
       role: "Directora proyectos y territorio",
       image: "/images/team/fernanda.jpg",
       description:

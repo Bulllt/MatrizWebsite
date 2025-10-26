@@ -20,13 +20,13 @@ export default function WeAre() {
       path: "/equipo/catherine",
     },
     {
-      name: "Eduardo Filun",
+      name: "Eduardo Filún Matus",
       role: "Director programas y formación",
       image: "/images/team/eduardo.jpg",
       path: "/equipo/eduardo",
     },
     {
-      name: "Fernanda González",
+      name: "Fernanda González Jara",
       role: "Directora proyectos y territorio",
       image: "/images/team/fernanda.jpg",
       path: "/equipo/fernanda",
