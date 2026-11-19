@@ -105,6 +105,32 @@
   margin: 0;
 }
 
+.footerLegalLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.footerLegalLink {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footerLegalLink:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.footerLegalDivider {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .footerContainer {

@@ -73,6 +73,15 @@ export default function Footer() {
       </div>
 
       <div className="footerBottom">
+        <div className="footerLegalLinks">
+          <NavLink to="/terminos" className="footerLegalLink">
+            Términos de Servicio
+          </NavLink>
+          <span className="footerLegalDivider">•</span>
+          <NavLink to="/privacidad" className="footerLegalLink">
+            Política de Privacidad
+          </NavLink>
+        </div>
         <p className="footerCopyright">
           © {new Date().getFullYear()} Matriz. Todos los derechos reservados.
         </p>
